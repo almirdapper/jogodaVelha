@@ -1,9 +1,16 @@
 package Factory;
 import Classes.*;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 
 public class JogandoFac {
+    ArrayList<Jogando>dadosJogadores = new ArrayList<Jogando>();
     Jogando jogando = new Jogando();
+    String jogador01;
+    String jogador02;
+    int valorX;
+    int valor0;
     
      private int[][] tabela= new int[3][3];
     
@@ -18,21 +25,44 @@ public class JogandoFac {
     }
       
       public void cadastroJogadores(String jogador1, String jogador2){
-          jogando.setNomeJogador(jogador1);
-          jogando.setNomeJogador2(jogador2);
+          jogador01 = jogador1;
+          jogador02 = jogador2;
+          jogando.setNomeJogador(jogador01);
+          jogando.setNomeJogador2(jogador02);
       }
       
-      public void escolhaXou0 (String x, String o){
-          jogando.setEscolha0(o);
-          jogando.setEscolhaX(x);
-          
-          String j1;
-          String j2;
-          
-          if (j1==jogando.getEscolha0()){
-              jogando.getNomeJogador()
-          }
+      public void escolhaXou0 (int x, int o){
+         if(x == 1){
+              valorX =1;
+              valor0 =-1;
+             jogando.setEscolhaX(jogador01);
+             jogando.setEscolha0(jogador02);
+      }else{
+         jogando.setEscolha0(jogador01);
+         jogando.setEscolhaX(jogador02);
+              valorX =-1;
+              valor0 =1;
+            }
       }
+      
+      
+      public void jogando(){
+          int jog=1;
+          
+          for (int i  = 1; i<=8 ; i++){
+              if(jog ==1){
+                  JOptionPane.showMessageDialog(null, "Sua Vez de Jogar: "+ jogador01);
+                  jog = jog+1;
+              }else if(jog ==2){
+                  JOptionPane.showMessageDialog(null, "Sua Vez de Jogar: "+ jogador02);
+                  jog = jog-1;
+              }
+          }
+          
+          //return dadosJogadores;
+      }
+      
+      
       
       public int checaLinhas(){
         for(int linha=0 ; linha<3 ; linha++){

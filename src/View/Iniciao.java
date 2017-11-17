@@ -59,6 +59,11 @@ public class Iniciao extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -168,6 +173,7 @@ public class Iniciao extends javax.swing.JFrame {
        String j1 = JOptionPane.showInputDialog(null,"Jogador 1");
        String j2 = JOptionPane.showInputDialog(null,"Jogador 2");
        
+       JOptionPane.showMessageDialog(null, "Jogador: "+"\n"+j1+"\n"+" Escolha  X ou 0!");
        jogandoFac.cadastroJogadores(j1, j2);
       
        Xou0 xou0 = new Xou0();
@@ -198,6 +204,10 @@ public class Iniciao extends javax.swing.JFrame {
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      jogandoFac.jogando();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
