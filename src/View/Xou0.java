@@ -83,8 +83,7 @@ public class Xou0 extends javax.swing.JFrame {
         int o = -1;
         jogandoFac.escolhaXou0(x, o);
         this.dispose();
-        iniciao = new Iniciao();
-        iniciao.setVisible(true);
+       
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -93,8 +92,7 @@ public class Xou0 extends javax.swing.JFrame {
         int o =  1;
         jogandoFac.escolhaXou0(x, o);
         this.dispose();
-        iniciao = new Iniciao();
-        iniciao.setVisible(true);
+      
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

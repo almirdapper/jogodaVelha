@@ -37,7 +37,7 @@ public class Sobre extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Sobre\n\n\nAjuda Jogo da velha");
+        jTextArea1.setText("Sobre\n\n\nAjuda Jogo da velha.\n\nAo inicio do jogo deve informar o nome dos\ndois jogadores.\n\nAo termino do jogo para Nova partida deve-se\nir em arquivo - novo jogo.Uma nova partida irá\nser iniciada.\n\n\ndesenvolvido por:\n\nAlmir Dapper.\n\n");
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Sair");

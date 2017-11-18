@@ -82,7 +82,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Sobre&#xa;&#xa;&#xa;Ajuda Jogo da velha"/>
+                <Property name="text" type="java.lang.String" value="Sobre&#xa;&#xa;&#xa;Ajuda Jogo da velha.&#xa;&#xa;Ao inicio do jogo deve informar o nome dos&#xa;dois jogadores.&#xa;&#xa;Ao termino do jogo para Nova partida deve-se&#xa;ir em arquivo - novo jogo.Uma nova partida ir&#xe1;&#xa;ser iniciada.&#xa;&#xa;&#xa;desenvolvido por:&#xa;&#xa;Almir Dapper.&#xa;&#xa;"/>
               </Properties>
             </Component>
           </SubComponents>

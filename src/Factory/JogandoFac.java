@@ -1,12 +1,13 @@
 package Factory;
 import Classes.*;
+import View.Xou0;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
 public class JogandoFac {
     ArrayList<Jogando>dadosJogadores = new ArrayList<Jogando>();
-    Jogando jogando = new Jogando();
+    Jogando jogando ;
     String jogador01;
     String jogador02;
     int valorX;
@@ -25,14 +26,23 @@ public class JogandoFac {
     }
       
       public void cadastroJogadores(String jogador1, String jogador2){
-          jogador01 = jogador1;
-          jogador02 = jogador2;
-          jogando.setNomeJogador(jogador01);
-          jogando.setNomeJogador2(jogador02);
+        Jogando jogando = new Jogando();
+         jogando.setNomeJogador(jogador1);
+         jogando.setNomeJogador2(jogador2);
+         jogador01 = jogador1;
+         jogador02 = jogador2;
+         
+         
+         
+         
+               
+       
       }
       
       public void escolhaXou0 (int x, int o){
-         if(x == 1){
+        
+          
+          if(x == 1){
               valorX =1;
               valor0 =-1;
              jogando.setEscolhaX(jogador01);
@@ -47,8 +57,9 @@ public class JogandoFac {
       
       
       public void jogando(){
+          String jj = jogando.getEscolha0();
+          JOptionPane.showMessageDialog(null, jj);
           int jog=1;
-          
           for (int i  = 1; i<=8 ; i++){
               if(jog ==1){
                   JOptionPane.showMessageDialog(null, "Sua Vez de Jogar: "+ jogador01);
@@ -103,4 +114,11 @@ public class JogandoFac {
         return 0;
     }
 
+       public boolean tabelaCompleto(){
+        for(int linha=0 ; linha<3 ; linha++)
+            for(int coluna=0 ; coluna<3 ; coluna++)
+                if( tabela[linha][coluna]==0 )
+                    return false;
+        return true;
+    }
 }
